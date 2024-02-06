@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-^jr$u=e4*0!zkkv1-m8@5_1$5xq-*1@!z#&tgasv*lr4v-8la6
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'activity-tracker.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'testserver']
 if os.environ.get("DJANGO_ALLOWED_HOSTS") is not None:
     ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 # Application definition
@@ -44,10 +44,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    "django.contrib.sites", # <--
-    "allauth", # <--
-    "allauth.account", # <--
-    "allauth.socialaccount", # <--
+    "django.contrib.sites", 
+    "allauth", 
+    "allauth.account", 
+    "allauth.socialaccount", 
     "allauth.socialaccount.providers.google",
 
     'main.apps.MainConfig',
@@ -125,9 +125,9 @@ if 'DYNO' in os.environ:
     
     SITE_ID = 3
 else:
-    print("Not running on Heroku")
-
-    SITE_ID = 2
+    # print("Not running on Heroku")
+    # SITE_ID = 2
+    SITE_ID = 3
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

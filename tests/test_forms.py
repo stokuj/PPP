@@ -7,7 +7,7 @@ from django import setup
 
 
 import sys
-sys.path.append("C:/Users/dv6/Documents/GitHub/PracaInzActivity/Imp/ActivityTracker/activityTracker/")
+sys.path.append("C:/Users/dv6/Desktop/PPP/activityTracker/")
 
 import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'activityTracker.settings')
@@ -207,7 +207,7 @@ class CreateUserWithWrongFirstNameTest(TestCase):
         self.email = 'testuser1112@email.com'
         self.password = 'qJXyNRZPn6Zhh623'
         self.first_name1 = 'firstname01'
-        self.first_name2 = 'tomek😔 ÆÆ'
+        self.first_name2 = 'tomek! ÆÆ'
         self.last_name = 'lastname'
 
 
@@ -244,7 +244,7 @@ class CreateUserWithWrongLastNameTest(TestCase):
         self.password = 'qJXyNRZPn6Zhh623'
         self.first_name = 'firstname'
         self.last_name1 = 'lastname02'
-        self.last_name2 = 'lastname ½©'
+        self.last_name2 = 'lastname !!'
 
     def test_numeric_last_name(self):
         response = self.client.post('/register/', data={

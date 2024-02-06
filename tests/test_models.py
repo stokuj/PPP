@@ -7,7 +7,7 @@ from django.db import models
 
 from django import setup
 import sys
-sys.path.append("C:/Users/dv6/Documents/GitHub/PracaInzActivity/Imp/ActivityTracker/activityTracker/")
+sys.path.append("C:/Users/dv6/Desktop/PPP/activityTracker/")
 
 import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'activityTracker.settings')

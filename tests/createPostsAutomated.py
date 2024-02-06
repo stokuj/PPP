@@ -43,7 +43,7 @@ driver.quit()
 #################################################
   
 #################################################
-username        = 'AutoTestUserX0'
+username        = 'AutoTestUserA0'
 password        = 'DNovtta9TezM6S'
 email_damain    = '@mail.com'
 fname           = 'tomek'
@@ -52,7 +52,7 @@ lname           = 'paluch'
 
 start_time = t.time()
 
-for x in range(1, 9):     
+for x in range(1, 2):     
     launchBrowser(username + str(x), password,options,webD)
     
 print("sequential took ", (t.time() - start_time), " seconds")   

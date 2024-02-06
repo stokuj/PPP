@@ -52,7 +52,7 @@ driver.quit()
 #################################################
 
 #################################################
-username = 'AutoTestUserZ0'
+username = 'AutoTestUserA0'
 password = 'DNovtta9TezM6S'
 email_damain = '@mail.com'
 fname = 'tomek'
@@ -63,7 +63,7 @@ start_time = t.time()
 
 
 try:
-    for x in range(2):
+    for x in range(4):
         launchBrowser(username + str(x), password, username +
                       str(x) + email_damain, fname, lname, options, webD)
 
