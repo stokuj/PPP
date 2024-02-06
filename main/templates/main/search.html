@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %} {% block title %}Explore{% endblock %}
+{% block content %}
+<br>
+<form method="post">
+    <h2 class="font-semibold text-lg">Search</h2>
+    <p> You can search user here by their names.</p>
+    {% csrf_token %}
+    <input type="text" name="search_val" placeholder="Type username: ">&nbsp; &nbsp;
+    <button type="submit" class="btn btn-dark btn-lg">>Search</button>
+    <div class="col-md-9 col-md-pull-3">
+</form>  
+<hr>
+{% for users in username_profile_list %}
+<section class="search-result-item">
+    <a class="image-link" href="/profile/{{users.user}}"><img class="image" src="{{users.profileimg.url}}" width="100" height="100">
+    </a>
+    <div class="search-result-item-body">
+        <div class="row">
+            <div class="col-sm-9">
+                 <h4 class="search-result-item-heading"><a href="/profile/{{users.user}}"><b>@{{users.user}}</b></a></h4>
+            </div>
+        </div>
+    </div>
+</section>
+{% endfor %}
+
+
+{% endblock %}
